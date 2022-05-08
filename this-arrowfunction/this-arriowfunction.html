@@ -1,0 +1,21 @@
+<button id="버튼">버튼이에요</button>
+<!-- 그럼 콘솔창에 '버튼이에요'라는 글자가 출력되죠? 잘 되는군요.
+
+ 
+
+Q. 그럼 setTimeout을 이용해서 1초 후에 this.innerHTML을 콘솔창에 출력하고 싶으면 어떻게 코드를 수정해야할까요?
+
+1초 후에 '버튼이에요'라는 글자가 콘솔창에 등장하면 성공입니다.  -->
+<script>
+   
+
+  document.getElementById('버튼').addEventListener('click', function(){
+   
+    //setTimeout(function(){ console.log(this.innerHTML)}, 1000)
+    //이렇게 하면 1초뒤에 undefined가 출력됌 여기서 this의 뜻은 
+  //this는 function 안에서 맨날 바뀜 가까이 있는 여기서 this는 윈도우가 나옵니다
+    setTimeout(()=>{ console.log(this.innerHTML)}, 1000)
+    //이렇게하면 위에있는 값을 this로 가져옴
+  });
+
+</script>

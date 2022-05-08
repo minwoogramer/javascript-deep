@@ -1,0 +1,41 @@
+<div style="display : none">모달창0</div>
+<div style="display : none">모달창1</div>
+<div style="display : none">모달창2</div>
+
+<button>버튼0</button>
+<button>버튼1</button>
+<button>버튼2</button>
+
+<script>
+  //?
+var 버튼들 = document.querySelectorAll('button');
+var 모달창들 = document.querySelectorAll('div');
+
+버튼들[0].addEventListener('click', function(){
+  모달창들[0].style.display = 'block';
+});
+
+버튼들[1].addEventListener('click', function(){
+  모달창들[1].style.display = 'block';
+});
+
+버튼들[2].addEventListener('click', function(){
+  모달창들[2].style.display = 'block';
+});
+for (var i = 0; i < 3; i++){
+
+버튼들[i].addEventListener('click', function(){
+  모달창들[i].style.display = 'block';
+});
+
+}
+</script>
+<!-- //지금 display : none 덕분에 모달창이 아무것도 안보이는 상태입니다. 
+
+자바스크립트를 잘 짜서
+
+0번째 버튼을 누르면 0번째 모달창, 
+
+1번째 버튼을 누르면 1번째 모달창을 보여주고 싶습니다. 
+
+그럼 코드를 어떻게 짜면 될까요?  -->
