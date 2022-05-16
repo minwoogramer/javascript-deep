@@ -62,18 +62,18 @@ console.log('안녕')
 오브젝트.data;
 오브젝트.함수();
 
-3.기계안에서 쓰면 새로 생성되는 오브젝트를 뜻함
-오브젝트내의메소드에서쓰면
-그메소를 가지고있는 메소드
+// 3.기계안에서 쓰면 새로 생성되는 오브젝트를 뜻함
+// 오브젝트내의메소드에서쓰면
+// 그메소를 가지고있는 메소드
 
-fumction 기계(){
+function 기계(){
 this.이름 = "kim"
 }
 4.이벤트 리스너
 
-이벤트 리스너 안에서 this를 쓰면
+// 이벤트 리스너 안에서 this를 쓰면
 
-this; e.currentTarget;이랑똑같음
+// this; e.currentTarget;이랑똑같음
 
 var arr=[1,2,3]
 arr.forEach((e)=>{
@@ -85,20 +85,20 @@ document.getElementById('버튼').addEventListener('click', function(e){
     console.log(this)
   });
 });
-내부 코드가 3번 반복됌
+// 내부 코드가 3번 반복됌
 
-함수안에들어가는 함수를 콜백함수라고함
+// 함수안에들어가는 함수를 콜백함수라고함
 
-여기서 console.log(this)를넣으면 뭐나옴?
-1번혹은 2번뜻이나옴
+// 여기서 console.log(this)를넣으면 뭐나옴?
+// 1번혹은 2번뜻이나옴
 
-여기서의 this는
-함수가쓰인위치에 따라 this가 변함
+// 여기서의 this는
+// 함수가쓰인위치에 따라 this가 변함
 
 //일반함수에서 this는 window가나옴
-엄밀히말하면 전역함수이기때문
+// 엄밀히말하면 전역함수이기때문
 
-오브젝트 내에서 콜백함수를 쓴다면 this는?
+// 오브젝트 내에서 콜백함수를 쓴다면 this는?
 this.name
 var 오브젝트 = {
   이름들 : ['김', '이', '박'];
@@ -108,5 +108,5 @@ var 오브젝트 = {
       });
   }
 }
-arrowfunction 특징 this를 변화시키지 않음
+//arrowfunction 특징 this를 변화시키지 않음
 
