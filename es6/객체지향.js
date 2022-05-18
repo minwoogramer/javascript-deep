@@ -48,3 +48,34 @@ function constuctor(name,price){
 
 let 상품1 = new constuctor('shirts', 50000);
 let 상품1 = new constuctor('pants', 60000);
+
+//prototype은 유전자 기계를 만들면 prototype이라는공간이 자동으로생깁니다
+function 기계(){
+    this.name = 'Kim';
+    this.age = 15;
+  }
+  기계.prototype.gender = '남';
+  var 학생1 = new 기계();
+  
+  console.log(학생1.gender)
+//   자바스크립트는 오브젝트에서 값을 출력할 때 이런 순서로 물어봅니다.
+
+// (1) 학생1에 직접 gender라는 값이 있는가?
+
+// (2) 그럼 부모 유전자에 gender라는 값이 있는가?
+
+// (3) 그럼 부모의 부모 유전자에 gender라는 값이 있는가?
+
+// (4) 그럼 부모의 부모의 부모의 유전자에 .. 그게 있는가?
+// 그래서 학생1이라는 오브젝트가 gender라는 값을 가지고 있지 않지만
+
+// 부모의 유전자(기계.prototype) 에 있는 gender라는 걸 출력할 수 있는 이유!
+
+//작동원리2 : 자바스크립트 내장함수 toString() 을 쓸 수 있는 이유 
+var arr = [1,2,3];
+console.log( arr.toString() ); //가능
+//내가 만든 array에 arr.toString() 이렇게 붙일 수 있는 이유는 
+
+// 내가 만든 array의 부모 유전자가 toString()을 가지고 있기 때문입니다.
+
+ 
