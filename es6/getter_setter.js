@@ -37,7 +37,7 @@ class 인간{
     this.name='park';
     this.age=20;
   }
- get nextAge(){
+  get nextAge(){
       return this.age +1;
   }
   set setAge(나이)
@@ -46,3 +46,4 @@ class 인간{
   }
 }
 let 인간1= new 인간();
+//데이터 출력/수정함수 만들어 쓰는이유?=>데이터의 무결성떄문입니다.

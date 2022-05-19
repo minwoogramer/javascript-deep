@@ -78,4 +78,32 @@ console.log( arr.toString() ); //가능
 
 // 내가 만든 array의 부모 유전자가 toString()을 가지고 있기 때문입니다.
 
+
+class 할아버지{
+  constuctor(name, name2){
+      this.성= 'kim'
+      this.이름= name;
+      this.이름2=name2;
+  }
+  sayHi(){
+      console.log('안녕')
+      //할아버지 prototype에 생성됌
+  }
+}
+// let 할아버지1 = new 할아버지('만덕')
+
+class 아버지 extends 할아버지{
+    //extends한 친구는 super()라는애를 써야함
+    //super()=>물려받는 class의 construtor라는 뜻
+constuctor(name,name2){
+    super(name, name2)
+    this.나이=50;
+}
+ sayHi(){
+     console.log('안녕 저는 아버지에요');
+     super.sayHi();///부모 class의 ptototype을 의미
+ }
+}
+let 아버지1= new 아버지('만수');
+
  
