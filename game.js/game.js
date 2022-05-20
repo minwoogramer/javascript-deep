@@ -9,7 +9,8 @@
 const son = ["가위", "바위", "보"]
 
 //이벤트리스너로 위 배열 불러오는방법
-
+//대결이 끝나고 status값에 따라 화면에 보이는거를 만들어야함
+//
 
 class Player{//가위 바위 보가 들어가는곳
     constructor(hand){
@@ -49,5 +50,7 @@ class Game  {//플레이어가 뭘하는지
 let player1 =new Player(손)
 let player2 =new Player(손)
 let Game = new Game(player1,player2)
+
+Game.대결(player1,player2)
 
 
