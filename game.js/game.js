@@ -33,9 +33,9 @@ class Game  {//플레이어가 뭘하는지
       }
 
     대결(){
-        if(this.player1.Hand=="가위" && this.player2.Hand=="보"||
-            this.player1.Hand=="바위" && this.player2.Hand=="가위"||
-            this.player1.Hand=="보" && this.player2.Hand=="바위"){
+        if(this.player1.hand=="가위" && this.player2.hand=="보"||
+            this.player1.hand=="바위" && this.player2.hand=="가위"||
+            this.player1.hand=="보" && this.player2.hand=="바위"){
            this.playerStatus.WIN=true
             }
             if(this.player1.hand=this.player2.hand){

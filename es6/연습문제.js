@@ -44,10 +44,48 @@ class Unit{
         this.체력=100;
     }
     get battlePoint(){
-        console.log(this.공격력 +this.체력)
+        return this.공격력 +this.체력
     }
     set heal(heal){
-        this.체력=체력 +50;
+        this.체력=this. 체력 + heal;
     }
-}
+};
 
+let 쎈애 = new Unit();
+
+console.log(쎈애.battlePoint)
+쎈애.heal= 50;
+
+//
+
+var data = {
+    odd : [],
+    even : []
+  }
+//(1) data 오브젝트에는 setter 역할 함수가 하나 필요합니다.
+
+// setter 함수에 1,2,3,4 이렇게 아무 자연수나 파라미터로 입력하면 홀수는 odd, 짝수는 even 이라는 속성에 array 형태로 저장되어야합니다. 
+var data = {
+    odd : [],
+    even: [],
+   setter : function(...number){
+       number.forEach((a)=>{
+           if(a %2 ==1){
+               this.odd.push(a);//홀수일때
+           }else{
+               this.even.push(a);//짝수일때
+           }
+       })
+   }
+};
+data.setter(1,2,3)
+//(2) data 오브젝트에는 getter 역할 함수가 하나 필요합니다.
+
+//getter 함수를 사용하면 odd, even에 저장된 모든 데이터들이 숫자순으로 정렬되어 출력되어야합니다. 
+var data = {
+    odd : [],
+    even : [],
+    get getter(){
+        return [...this.odd, ...this.even].sort((a,b)=> b -a);
+    }
+  }
