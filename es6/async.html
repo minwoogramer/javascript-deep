@@ -1,0 +1,17 @@
+<!-- //예제 : <button>을 누르면 성공하는 Promise 만들기 -->
+
+<button id="test">버튼</button>
+
+<script>
+  var 프로미스 = new Promise(function(성공, 실패){
+      document.getElementById('test').addEventListener('click', function(){
+        성공();
+      });
+  })
+  async function 버튼(){
+    var 결과 = await 프로미스;
+    console.log('성공했어요')
+  }
+
+  버튼();
+</script>
