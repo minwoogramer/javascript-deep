@@ -6,7 +6,7 @@ function 함수() {
 } 
 //함수 실행전에 함수선언전에 해도 되냐?가능 호이스팅이 되기때문
 //근데 문제가 뭐냐 안녕 만들기전에 안녕을 출력해서 에러가남
-//변수가 할당되지않고 호이스팅되지않음 let,const는 hoistion시 undefined할당안됌
+//변수가 할당되지않고 호이스팅되지않음 let,const는 hoisting시 undefined할당안됌
 
 함수();
 var 함수 = function() {

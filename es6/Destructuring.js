@@ -20,3 +20,27 @@ var { name, age } = {name: 'kim' , age: 30};
 var { name, age =31 } = {name: 'kim'};//default도 지정가능
 //만약 변수명이 마음에안든다 
 var {name : 나이, age =31} = {name:'kim'}
+
+var { name: 나이 = 'Park'} = {};
+
+//반대로 변수들을 object에 집어넣고 싶은경우
+
+var name = 'kim';
+var age = 30;
+
+var obj = {name : name, age :age};
+//es6부터는 이게 이렇게 바뀝니다
+var obj = {name, age}//name 이라는 key값에는 name이라는 변수가들어감
+
+var obj = {name: 'kim', age:30};
+function 함수 ({name, age}){
+    console.log(name, age);
+}
+함수({ name :'kim', age:30});
+
+var obj = {name: 'kim', age:30};
+function 함수 ([name,age]){
+    console.log(name, age);
+}
+
+함수([1,2])

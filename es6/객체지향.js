@@ -1,4 +1,4 @@
-1.constructor란?
+constructor란?
 //학생 출석부를 만들어보자
 
 var 학생1 = { name : 'Kim', age : 15 };

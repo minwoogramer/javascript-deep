@@ -1,0 +1,38 @@
+<!-- //웹개발 잘하고 싶으면 브라우저 기능을 잘 알아야함
+//JS 문법은 도구일 뿐
+
+//Web Componenet(브라우저 기본기능) -->
+
+<body>
+<custom-input name="비번"></custom-input>
+
+ <!-- attribute 설정도 할수있음 -->
+<!-- attribute 변경감지기능 제공됌 -->
+React 특징
+props 변경되면 html 자동으로 재랜더링됌
+    <script>
+
+        class 클래스 extends HTMLElement {
+            connectedCallback(){
+                let name = this.getAttribute('name')
+                let 변수 =document.createElement('label');
+                this.appendChild(변수)//html 생성속도 빨라짐 효율적! 1번방법
+
+                this.textContent =`<label> ${name} 인풋이에요</label><input>`//2번방법
+            }
+            //attribute 변경 감지하는법
+            //attribute 변경될때마다 html 재랜더링하고싶음?
+            static get observedAttribute(){
+                return ['name']
+            }
+            attributeChangeCallback(){
+                console.log(this.getAttribute('name'))
+            }
+            //결론 Web components 기능쓰면 긴 HTML도 함수도 사용가능
+            //하지만 React,Vue가 더 잘함
+        }
+        
+        
+        customElements.define('custom-input', 클래스);
+    </script>
+</body>
