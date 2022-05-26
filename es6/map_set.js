@@ -55,3 +55,5 @@ var 출석부2 = new Set([ 'john' , 'tom', 'andy', 'tom' ]);
 
 //Set 자료형에 반복문 돌리기
 
+/* Ellipse */
+

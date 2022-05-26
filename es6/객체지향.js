@@ -12,7 +12,7 @@ let 학생1 = {name :'kim', age: 15 }
 function 기계(){
     this.name='Kim',
     this.age=15,
-    sayHi :function(){
+    sayHi: function(){
         console.log('안녕하세요' + this.name + '입니다')
     }
 }
